@@ -1,0 +1,1866 @@
+{
+    "model": "gemini-2.5-pro-preview-03-25",
+    "prompt": "\nYou are taking a multiple-choice benchmark.  \n  \nTo answer the questions, you will be provided with two videos. The first video is the initial state of the scene, and the second video is the final state of the scene.\nPlease pay attention to the changes of object in the scene between the two videos.\nFuthermore, if we say on object had been removed, vanished or disappear from a cubicle it means it will not be present in the second video.\nIf we say an object has appeared in a cubicle it means it will be present in the second video.\nIf we say an object has been moved, it means it has moved within the cubicle or between cubicles.\n\nPlease answer the question to best of your ability. \n\nFor each question below, reply with the single letter (A\u2013E) that you believe is correct.  \nDo not provide explanations\u2014only the letter.\n\nPlease return a json object in the following format:\n\n\"answers\": [\n{\n    \"question\": \"Q1\",\n    \"answer\": \"B\"\n},\n{\n    \"question\": \"Q2\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q3\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q4\",\n    \"answer\": \"B\"\n},\n{\n    \"question\": \"Q5\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q6\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q7\",\n    \"answer\": \"C\"\n}\n....\n]\n\nPlease use the Q# correspoding the questions provided.\n\nQ93:\nQuestion: Which object appeared on the right side of Jack. J's cubicle, on top of a black box?\nA: Green triceratops dinosaur toy\nB: Muffin\nC: White phone charger with red cable\nD: Rubix Cube\nE: None of the above\n\nQ94:\nQuestion: Which object appeared on top of the PC in Emily's cubicle?\nA: Pig Pink Plush\nB: Eiffel tower toy\nC: Box of Gloves\nD: Brow Jacket\nE: None of the above\n\nQ95:\nQuestion: Which object disappeared from the left side of Jack. S's cubicle?\nA: Pink Box, with chinese writing and bottle inside\nB: Eiffel tower toy\nC: 125 box of chocolated, red box\nD: Box of Gloves\nE: None of the above\n\nQ96:\nQuestion: Which object appeared in front of the Monitor in Daniel's cubicle?\nA: Duracel Batteries\nB: GPU RTX 4090 Box\nC: Coup, boardgame box\nD: Uno, Board game box, pack or cards\nE: All of the above\n\nQ97:\nQuestion: Which object disappeared from in front of the Monitors in Daniel's cubicle?\nA: GPU RTX 2080 Ti\nB: Painting\nC: Purple Human shaped stress toy.\nD: Green triceratops dinosaur toy\nE: None of the above\n\nQ98:\nQuestion: Which object appeared in front of the PC in Amy's cubicle?\nA: Table Computer, black\nB: Laptop, Lenovo thinkpad\nC: Cpu HeatSink\nD: Uno, Board game box, pack or cards\nE: None of the above\n\nQ99:\nQuestion: Which object appeared on the left side of Alex's cubicle, on top of the picture frames?\nA: GPU RTX 2080 Ti\nB: Dixit, board game box\nC: 1000 Piece Puzzle\nD: Electronics Fundamentals Book, red, blue and yellow.\nE: None of the above\n\nQ100:\nQuestion: Which object disappeared from on top of the PC in Alex's cubicle?\nA: Exploting Kittens, Boardgame, blue box\nB: Black Ethernet Cable\nC: Green triceratops dinosaur toy\nD: Coup, boardgame box\nE: None of the above\n\nQ101:\nQuestion: Which object appeared on the left side of Eddie's cubicle?\nA: Catan Board game box red\nB: Eiffel tower toy\nC: Box of Gloves\nD: Duracel Batteries\nE: None of the above\n\nQ102:\nQuestion: Which object appeared on the right side of Eddie's cubicle?\nA: Purple Human shaped stress toy.\nB: Uno, Board game box, pack or cards\nC: Painting\nD: GPU RTX 2080 Ti\nE: None of the above\n\nQ103:\nQuestion: Which object disappeared from the right side of Eddie's cubicle, beside the gray backpack?\nA: Coup, boardgame box\nB: Catan Board game box red\nC: Painting\nD: Laptop, Lenovo thinkpad\nE: 1000 Piece Puzzle\n\nQ104:\nQuestion: Which object appeared on the left side of Cecilia's cubicle?\nA: 1000 Piece Puzzle\nB: Cpu HeatSink\nC: Nvidia Jetson Nano Developer Kit, Small Green Box\nD: Blue Box full of ping pong balls\nE: None of the above\n\nQ105:\nQuestion: Which object disappeared from the back of Kristine's cubicle, below the whiteboard?\nA: Pig Pink Plush\nB: Electronics Fundamentals Book, red, blue and yellow.\nC: Table Computer, black\nD: Cpu HeatSink\nE: None of the above\n\nQ106:\nQuestion: Which object disappeared from the left side of Kristine's cubicle, near the back?\nA: Butter Cookies, Metal box\nB: Nvidia Jetson Nano Developer Kit, Small Green Box\nC: Exploting Kittens, Boardgame, blue box\nD: Android Toy, green humanoid toy\nE: None of the above\n\nQ107:\nQuestion: Which object appeared on the right side of Lauren's cubicle?\nA: Roman head statue, toy\nB: Pencil Holder \nC: Blue Box full of ping pong balls\nD: RTX GPU 2080 Ti\nE: None of the above\n\nQ108:\nQuestion: Which object appeared on the right side of Sherlock Holmes' cubicle?\nA: Pick toy\nB: Catan Board game box red\nC: Eiffel tower toy\nD: Pig Pink Plush\nE: None of the above\n\nQ109:\nQuestion: Which object disappeared from the left side of Sherlock Holmes' cubicle?\nA: Electronics Fundamentals Book, red, blue and yellow.\nB: Rubix Cube\nC: Red starbucks cup\nD: Pink Box, with chinese writing and bottle inside\nE: None of the above\n\nQ110:\nQuestion: Which object appeared on the left side of Alexandria's cubicle?\nA: Duracel Batteries\nB: GPU RTX 4090 Box\nC: Painting\nD: Table Computer, black\nE: None of the above\n\nQ111:\nQuestion: Which object disappeared from the right side of James' cubicle?\nA: Butter Cookies, Metal box\nB: Computer Fan, Brown\nC: Dixit, board game box\nD: coffee kettle\nE: None of the above\n\nQ112:\nQuestion: Which object disappeared from the right side of James' cubicle?\nA: Roman head statue, toy\nB: Colourful backpack\nC: Exploting Kittens, Boardgame, blue box\nD: Butter Cookies\nE: None of the above\n\nQ113:\nQuestion: Which object disappeared from the right side of Carleton's cubicle?\nA: 125 box of chocolates, red box\nB: Yellow and purpule plushi\nC: Exploting Kittens, Boardgame, blue box\nD: Android Toy, green humanoid toy\nE: Newport, black brief case\n\nQ114:\nQuestion: Which object disappeared from on top of the PC in cubicle 2008R?\nA: Roman head statue, toy\nB: Bridge of park, white box of card\nC: Uno, Board game box, pack or cards\nD: Cpu HeatSink\nE: None of the above\n\nQ115:\nQuestion: Which object appeared on the right side of cubicle 2008R?\nA: Goose plush\nB: Eiffel tower toy\nC: Table Computer, black\nD: Pencil Holder \nE: None of the above\n\n\n",
+    "video_paths": [
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_0_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_1_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_1_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_2_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_2_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_3_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_3_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_4_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_4_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_5_720p_10fps.mp4"
+    ],
+    "questions": {
+        "Q1": {
+            "Type": "Object Detection",
+            "Change Number": 1,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from Json's cubicle on the right side?",
+            "Multiple Choice": {
+                "A": "RTX GPU 2080 Ti",
+                "B": "Pick toy",
+                "C": "Catan Board game box red",
+                "D": "Eiffel tower toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q2": {
+            "Type": "Object Detection",
+            "Change Number": 2,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from the left side of Jack. J's cubicle?",
+            "Multiple Choice": {
+                "A": "Rubix Cube",
+                "B": "Pick toy",
+                "C": "Red starbucks cup",
+                "D": "Pink Box, with chinese writing and bottle inside",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q3": {
+            "Type": "Object Detection",
+            "Change Number": 3,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on the left side of Emily's cubicle?",
+            "Multiple Choice": {
+                "A": "Duracel Batteries",
+                "B": "GPU RTX 4090 Box",
+                "C": "Catan Board game box red",
+                "D": "Painting",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q4": {
+            "Type": "Object Detection",
+            "Change Number": 4,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from on top of the computer in Jerry's cubicle?",
+            "Multiple Choice": {
+                "A": "Computer Fan, Brown",
+                "B": "Dixit, board game box",
+                "C": "coffee kettle",
+                "D": "Eiffel tower toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q5": {
+            "Type": "Object Detection",
+            "Change Number": 5,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on the right side close to the edge in Jack. S's cubicle?",
+            "Multiple Choice": {
+                "A": "Rubix Cube",
+                "B": "Roman head statue, toy",
+                "C": "Colourful backpack",
+                "D": "Butter Cookies",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q6": {
+            "Type": "Object Detection",
+            "Change Number": 6,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared beside the white box on the right side in Frank's cubicle?",
+            "Multiple Choice": {
+                "A": "125 box of chocolates, red box",
+                "B": "Red starbucks cup",
+                "C": "Yellow and purpule plushi",
+                "D": "Exploting Kittens, Boardgame, blue box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q7": {
+            "Type": "Object Detection",
+            "Change Number": 7,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from the back of Daniel's cubicle beside the monitor?",
+            "Multiple Choice": {
+                "A": "Newport, black brief case",
+                "B": "Bridge of park, white box of card",
+                "C": "Pink Box, with chinese writing and bottle inside",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q8": {
+            "Type": "Object Detection",
+            "Change Number": 8,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on the left side, on top of picture frames in Alex's cubicle?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Goose plush",
+                "C": "Eiffel tower toy",
+                "D": "Duracel Batteries",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q9": {
+            "Type": "Object Detection",
+            "Change Number": 9,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from beside the monitor, on the right side at the back of Alana's cubicle?",
+            "Multiple Choice": {
+                "A": "GPU RTX 4090 Box",
+                "B": "Table Computer, black",
+                "C": "RTX GPU 2080 Ti",
+                "D": "Purple Human shaped stress toy.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q10": {
+            "Type": "Object Detection",
+            "Change Number": 10,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared beside the gray bag on the right side of Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "Coup, boardgame box",
+                "B": "Painting",
+                "C": "Electronics Fundamentals Book, red, blue and yellow.",
+                "D": "GPU RTX 4090 Box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q11": {
+            "Type": "Object Detection",
+            "Change Number": 11,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from close to the keyboard and the two monitors in Roberto's cubicle?",
+            "Multiple Choice": {
+                "A": "Android Toy, green humanoid toy",
+                "B": "Catan Board game box red, Extension ",
+                "C": "Computer Fan, Brown",
+                "D": "Roman head statue, toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q12": {
+            "Type": "Object Detection",
+            "Change Number": 12,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared beside the keyboard, in front of the monitor in Kristine's cubicle?",
+            "Multiple Choice": {
+                "A": "125 Chocolate box, Red",
+                "B": "Frisbee",
+                "C": "Monopoly Deal boardgame, green box",
+                "D": "Dixit, board game box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q13": {
+            "Type": "Object Detection",
+            "Change Number": 13,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from beside the computer on the left side of Cecilia's cubicle?",
+            "Multiple Choice": {
+                "A": "coffee kettle",
+                "B": "Tata Tea, Green Box",
+                "C": "Tim Hortons Donut Box",
+                "D": "Exploting Kittens, Boardgame, blue box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q14": {
+            "Type": "Object Detection",
+            "Change Number": 14,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on top of the white box and paper, on the right side of Sherlock Holmes' cubicle?",
+            "Multiple Choice": {
+                "A": "1000 Piece Puzzle",
+                "B": "Roman head statue, toy",
+                "C": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "D": "Bridge of park, white box of card",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q15": {
+            "Type": "Object Detection",
+            "Change Number": 15,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on the chair in Lauren's cubicle?",
+            "Multiple Choice": {
+                "A": "Pair of Sneaker",
+                "B": "Black backpack",
+                "C": "Colourful backpack",
+                "D": "Goose plush",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q16": {
+            "Type": "Object Detection",
+            "Change Number": 16,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared close on the right side of James' cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Catan Board game box red",
+                "C": "Rubix Cube",
+                "D": "Butter Cookies",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q17": {
+            "Type": "Object Detection",
+            "Change Number": 17,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from the left side of Alexandria's cubicle, beside the white box?",
+            "Multiple Choice": {
+                "A": "125 box of chocolates, red box",
+                "B": "Pink Toy,",
+                "C": "Frisbee",
+                "D": "Purple Human shaped stress toy.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q18": {
+            "Type": "Object Detection",
+            "Change Number": 18,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on top of the computer in Carleton's cubicle?",
+            "Multiple Choice": {
+                "A": "Coup, boardgame box",
+                "B": "Yellow and purpule plushi",
+                "C": "Uno, Board game box, pack or cards",
+                "D": "Painting",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q19": {
+            "Type": "Object Detection",
+            "Change Number": 19,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on the left side of Josh's cubicle at the edge?",
+            "Multiple Choice": {
+                "A": "Electronics Fundamentals Book, red, blue and yellow.",
+                "B": "Table Computer, black",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "GPU RTX 4090 Box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q20": {
+            "Type": "Object Detection",
+            "Change Number": 20,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object disappeared from the left side of cubicle 2008R, beside the whiteboard?",
+            "Multiple Choice": {
+                "A": "Dixit, board game box",
+                "B": "125 Box of chocolates, red box",
+                "C": "Tata Tea, Green Box",
+                "D": "Newport, black brief case",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q21": {
+            "Type": "Object Detection",
+            "Change Number": 21,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared besides the white board in cubicle 2008Q?",
+            "Multiple Choice": {
+                "A": "Bridge of park, white box of card",
+                "B": "Bridge of park, white box of card",
+                "C": "Box of Gloves",
+                "D": "Android Toy, green humanoid toy",
+                "E": "Roman head statue, toy"
+            },
+            "Correct Choice": "A"
+        },
+        "Q22": {
+            "Type": "Object Detection",
+            "Change Number": 22,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "Which object appeared on the right side of Jack. J's cubicle, on top of a black box?",
+            "Multiple Choice": {
+                "A": "Newport, black brief case",
+                "B": "Muffin",
+                "C": "Uno, Board game box, pack or cards",
+                "D": "White phone charger with red cable",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q23": {
+            "Type": "Object Detection",
+            "Change Number": 23,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the right side of Jack. J's cubicle, where it was on top of a black box?",
+            "Multiple Choice": {
+                "A": "Rubix Cube",
+                "B": "Pig Pink Plush",
+                "C": "Box of Gloves",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q24": {
+            "Type": "Object Detection",
+            "Change Number": 24,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared in front of the monitor in Emily's cubicle?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Brow Jacket",
+                "C": "Pink Box, with chinese writing and bottle inside",
+                "D": "Eiffel tower toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q25": {
+            "Type": "Object Detection",
+            "Change Number": 25,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from in front of the left white board in Jack. S's cubicle?",
+            "Multiple Choice": {
+                "A": "125 box of chocolated, red box",
+                "B": "Goose plush",
+                "C": "GPU RTX 4090 Box",
+                "D": "Coup, boardgame box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q26": {
+            "Type": "Object Detection",
+            "Change Number": 26,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared on top of the PC case in Daniel's cubicle?",
+            "Multiple Choice": {
+                "A": "Duracel Batteries",
+                "B": "Uno, Board game box, pack or cards",
+                "C": "Eiffel tower toy",
+                "D": "GPU RTX 2080 Ti",
+                "E": "Painting"
+            },
+            "Correct Choice": "C"
+        },
+        "Q27": {
+            "Type": "Object Detection",
+            "Change Number": 27,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the left of Jerry's cubicle close to the edge?",
+            "Multiple Choice": {
+                "A": "Green triceratops dinosaur toy",
+                "B": "Table Computer, black",
+                "C": "Table Computer, black",
+                "D": "Laptop, Lenovo thinkpad",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q28": {
+            "Type": "Object Detection",
+            "Change Number": 28,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared close to the whiteboard on the right side of Frank's cubicle?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Dixit, board game box",
+                "C": "RTX GPU 2080 Ti",
+                "D": "1000 Piece Puzzle",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q29": {
+            "Type": "Object Detection",
+            "Change Number": 29,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the right side of the monitor in Alex's cubicle?",
+            "Multiple Choice": {
+                "A": "Electronics Fundamentals Book, red, blue and yellow.",
+                "B": "Exploting Kittens, Boardgame, blue box",
+                "C": "Black Ethernet Cable",
+                "D": "Purple Human shaped stress toy.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q30": {
+            "Type": "Object Detection",
+            "Change Number": 30,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared in front of the white board in Amy's cubicle?",
+            "Multiple Choice": {
+                "A": "Coup, boardgame box",
+                "B": "Green triceratops dinosaur toy",
+                "C": "Eiffel tower toy",
+                "D": "Box of Gloves",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q31": {
+            "Type": "Object Detection",
+            "Change Number": 31,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared close to the keyboard and in front left of the monitor in the unnamed cubicle?",
+            "Multiple Choice": {
+                "A": "Duracel Batteries",
+                "B": "Electronics Fundamentals Book, red, blue and yellow.",
+                "C": "Purple Human shaped stress toy.",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q32": {
+            "Type": "Object Detection",
+            "Change Number": 32,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from beside the gray backpack in Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "GPU RTX 2080 Ti",
+                "B": "Coup, boardgame box",
+                "C": "Painting",
+                "D": "Catan Board game box red",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q33": {
+            "Type": "Object Detection",
+            "Change Number": 33,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared on top of the white PC in Roberto's cubicle?",
+            "Multiple Choice": {
+                "A": "Painting",
+                "B": "Laptop, Lenovo thinkpad",
+                "C": "1000 Piece Puzzle",
+                "D": "GPU RTX 4090 Box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q34": {
+            "Type": "Object Detection",
+            "Change Number": 34,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the right side of Cecilia's desk, besides the white papers?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Android Toy, green humanoid toy",
+                "C": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "D": "Blue Box full of ping pong balls",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q35": {
+            "Type": "Object Detection",
+            "Change Number": 35,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared besides the Funko Pop toy in Kristine's cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Electronics Fundamentals Book, red, blue and yellow.",
+                "C": "Catan Board game box red, Extension ",
+                "D": "Table Computer, black",
+                "E": "Butter Cookies, Metal box"
+            },
+            "Correct Choice": "C"
+        },
+        "Q36": {
+            "Type": "Object Detection",
+            "Change Number": 36,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from on top of the white box and paper on the right side of Sherlock Holmes' cubicle?",
+            "Multiple Choice": {
+                "A": "Exploting Kittens, Boardgame, blue box",
+                "B": "Android Toy, green humanoid toy",
+                "C": "Roman head statue, toy",
+                "D": "Pencil Holder ",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q37": {
+            "Type": "Object Detection",
+            "Change Number": 37,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared on top of boxes on the left side of Lauren's cubicle?",
+            "Multiple Choice": {
+                "A": "125 Chocolate box, Red",
+                "B": "RTX GPU 2080 Ti",
+                "C": "Pick toy",
+                "D": "Catan Board game box red",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q38": {
+            "Type": "Object Detection",
+            "Change Number": 38,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the left side of James' cubicle, close to the edge?",
+            "Multiple Choice": {
+                "A": "Eiffel tower toy",
+                "B": "Frisbee",
+                "C": "Rubix Cube",
+                "D": "Red starbucks cup",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q39": {
+            "Type": "Object Detection",
+            "Change Number": 39,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared on the left side of Jason's cubicle?",
+            "Multiple Choice": {
+                "A": "Pink Box, with chinese writing and bottle inside",
+                "B": "Duracel Batteries",
+                "C": "Monopoly Deal boardgame, green box",
+                "D": "GPU RTX 4090 Box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q40": {
+            "Type": "Object Detection",
+            "Change Number": 40,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the left side of Carleton's cubicle?",
+            "Multiple Choice": {
+                "A": "Painting",
+                "B": "Computer Fan, Brown",
+                "C": "Dixit, board game box",
+                "D": "Tata Tea, Green Box",
+                "E": "All of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q41": {
+            "Type": "Object Detection",
+            "Change Number": 41,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared on the left side of Alexandria's cubicle?",
+            "Multiple Choice": {
+                "A": "Tim Hortons Donut Box",
+                "B": "coffee kettle",
+                "C": "Roman head statue, toy",
+                "D": "Colourful backpack",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q42": {
+            "Type": "Object Detection",
+            "Change Number": 42,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from the left side of Josh's cubicle?",
+            "Multiple Choice": {
+                "A": "Butter Cookies",
+                "B": "Exploting Kittens, Boardgame, blue box",
+                "C": "125 box of chocolates, red box",
+                "D": "Yellow and purpule plushi",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q43": {
+            "Type": "Object Detection",
+            "Change Number": 43,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared on the right side of cubicle 2008R, close to the monitor?",
+            "Multiple Choice": {
+                "A": "Newport, black brief case",
+                "B": "Bridge of park, white box of card",
+                "C": "1000 Piece Puzzle",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q44": {
+            "Type": "Object Detection",
+            "Change Number": 44,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object appeared in front of the white board in cubicle 2008Q?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Goose plush",
+                "C": "Eiffel tower toy",
+                "D": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q45": {
+            "Type": "Object Detection",
+            "Change Number": 45,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "Which object disappeared from beside the white board in cubicle 2008Q?",
+            "Multiple Choice": {
+                "A": "Bridge of park, white box of card",
+                "B": "Table Computer, black",
+                "C": "RTX GPU 2080 Ti",
+                "D": "Purple Human shaped stress toy.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q46": {
+            "Type": "Object Detection",
+            "Change Number": 46,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from underneath Alana's cubicle?",
+            "Multiple Choice": {
+                "A": "Coup, boardgame box",
+                "B": "Pair of Sneaker",
+                "C": "Electronics Fundamentals Book, red, blue and yellow.",
+                "D": "GPU RTX 4090 Box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q47": {
+            "Type": "Object Detection",
+            "Change Number": 47,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from the top right side of Alana's cubicle?",
+            "Multiple Choice": {
+                "A": "Android Toy, green humanoid toy",
+                "B": "Catan Board game box red, Extension ",
+                "C": "Black backpack",
+                "D": "Roman head statue, toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q48": {
+            "Type": "Object Detection",
+            "Change Number": 48,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on the right side of Jack. J's cubicle?",
+            "Multiple Choice": {
+                "A": "125 Chocolate box, Red",
+                "B": "Frisbee",
+                "C": "Monopoly Deal boardgame, green box",
+                "D": "Goose plush",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q49": {
+            "Type": "Object Detection",
+            "Change Number": 49,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on the right side of Emily's cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Tata Tea, Green Box",
+                "C": "Tim Hortons Donut Box",
+                "D": "Exploting Kittens, Boardgame, blue box",
+                "E": "All of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q50": {
+            "Type": "Object Detection",
+            "Change Number": 50,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from the left side of Emily's cubicle?",
+            "Multiple Choice": {
+                "A": "1000 Piece Puzzle",
+                "B": "Catan Board game box red",
+                "C": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "D": "Bridge of park, white box of card",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q51": {
+            "Type": "Object Detection",
+            "Change Number": 51,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from the right side of Jack. S's cubicle?",
+            "Multiple Choice": {
+                "A": "Pair of Sneaker",
+                "B": "Black backpack",
+                "C": "Rubix Cube",
+                "D": "Goose plush",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q52": {
+            "Type": "Object Detection",
+            "Change Number": 52,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared in front of the white board in Jerry's cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Catan Board game box red",
+                "C": "Rubix Cube",
+                "D": "Pink Toy,",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q53": {
+            "Type": "Object Detection",
+            "Change Number": 53,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared in front of the monitor in Frank's cubicle?",
+            "Multiple Choice": {
+                "A": "Frisbee",
+                "B": "Pink Toy,",
+                "C": "Purple Human shaped stress toy.",
+                "D": "Coup, boardgame box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q54": {
+            "Type": "Object Detection",
+            "Change Number": 54,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared in front of the two monitors in Daniel's cubicle?",
+            "Multiple Choice": {
+                "A": "Uno, Board game box, pack or cards",
+                "B": "Purple Human shaped stress toy.",
+                "C": "Painting",
+                "D": "Electronics Fundamentals Book, red, blue and yellow.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q55": {
+            "Type": "Object Detection",
+            "Change Number": 55,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from in front of the whiteboard in Amy's cubicle?",
+            "Multiple Choice": {
+                "A": "Table Computer, black",
+                "B": "GPU RTX 4090 Box",
+                "C": "Dixit, board game box",
+                "D": "125 Box of chocolates, red box",
+                "E": "Coup, boardgame box"
+            },
+            "Correct Choice": "E"
+        },
+        "Q56": {
+            "Type": "Object Detection",
+            "Change Number": 56,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared beside the Duracell batteries in Alex's cubicle?",
+            "Multiple Choice": {
+                "A": "Tata Tea, Green Box",
+                "B": "Bridge of park, white box of card",
+                "C": "Uno, Board game box, pack or cards",
+                "D": "Box of Gloves",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q57": {
+            "Type": "Object Detection",
+            "Change Number": 57,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on the left side of Alana's cubicle close to the edge?",
+            "Multiple Choice": {
+                "A": "Android Toy, green humanoid toy",
+                "B": "Painting",
+                "C": "Roman head statue, toy",
+                "D": "Newport, black brief case",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q58": {
+            "Type": "Object Detection",
+            "Change Number": 58,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from the left side of Alana's cubicle?",
+            "Multiple Choice": {
+                "A": "Muffin",
+                "B": "White phone charger with red cable",
+                "C": "Electronics Fundamentals Book, red, blue and yellow.",
+                "D": "Rubix Cube",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q59": {
+            "Type": "Object Detection",
+            "Change Number": 59,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared beside the gray backpack in Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Box of Gloves",
+                "C": "Brow Jacket",
+                "D": "Table Computer, black",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q60": {
+            "Type": "Object Detection",
+            "Change Number": 60,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from on top of the white PC in Roberto's cubicle?",
+            "Multiple Choice": {
+                "A": "GPU RTX 4090 Box",
+                "B": "Pink Box, with chinese writing and bottle inside",
+                "C": "Eiffel tower toy",
+                "D": "125 box of chocolated, red box",
+                "E": "All of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q61": {
+            "Type": "Object Detection",
+            "Change Number": 61,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from close to the monitor in Kristine's cubicle?",
+            "Multiple Choice": {
+                "A": "GPU RTX 4090 Box",
+                "B": "Coup, boardgame box",
+                "C": "Duracel Batteries",
+                "D": "Dixit, board game box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q62": {
+            "Type": "Object Detection",
+            "Change Number": 62,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from on top of boxes on the left side of Lauren's cubicle?",
+            "Multiple Choice": {
+                "A": "125 Box of chocolates, red box",
+                "B": "Uno, Board game box, pack or cards",
+                "C": "GPU RTX 2080 Ti",
+                "D": "Painting",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q63": {
+            "Type": "Object Detection",
+            "Change Number": 63,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on the right side of Sherlock Holmes' cubicle, close to the edge?",
+            "Multiple Choice": {
+                "A": "Green triceratops dinosaur toy",
+                "B": "Table Computer, black",
+                "C": "Tata Tea, Green Box",
+                "D": "Laptop, Lenovo thinkpad",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q64": {
+            "Type": "Object Detection",
+            "Change Number": 64,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on the right side of James' cubicle?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Dixit, board game box",
+                "C": "1000 Piece Puzzle",
+                "D": "Bridge of park, white box of card",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q65": {
+            "Type": "Object Detection",
+            "Change Number": 65,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object disappeared from the left side of Jason's cubicle?",
+            "Multiple Choice": {
+                "A": "Box of Gloves",
+                "B": "Electronics Fundamentals Book, red, blue and yellow.",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "Black Ethernet Cable",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q66": {
+            "Type": "Object Detection",
+            "Change Number": 66,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on the right side of Carleton's cubicle in front of the monitor?",
+            "Multiple Choice": {
+                "A": "Green triceratops dinosaur toy",
+                "B": "Eiffel tower toy",
+                "C": "Android Toy, green humanoid toy",
+                "D": "Box of Gloves",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q67": {
+            "Type": "Object Detection",
+            "Change Number": 67,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared on top of the PC case in cubicle 2008R?",
+            "Multiple Choice": {
+                "A": "Duracel Batteries",
+                "B": "Purple Human shaped stress toy.",
+                "C": "Uno, Board game box, pack or cards",
+                "D": "Roman head statue, toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q68": {
+            "Type": "Object Detection",
+            "Change Number": 68,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "Which object appeared close to the whiteboard in cubicle 2008Q?",
+            "Multiple Choice": {
+                "A": "Newport, black brief case",
+                "B": "GPU RTX 2080 Ti",
+                "C": "Coup, boardgame box",
+                "D": "Catan Board game box red",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q69": {
+            "Type": "Object Detection",
+            "Change Number": 69,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the right side of Kristine's cubicle?",
+            "Multiple Choice": {
+                "A": "Painting",
+                "B": "Laptop, Lenovo thinkpad",
+                "C": "Muffin",
+                "D": "1000 Piece Puzzle",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q70": {
+            "Type": "Object Detection",
+            "Change Number": 70,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the white power bar at the back of Roberto's cubicle?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "White phone charger with red cable",
+                "C": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "D": "Blue Box full of ping pong balls",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q71": {
+            "Type": "Object Detection",
+            "Change Number": 71,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared at the whiteboard in Jack. J's cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Electronics Fundamentals Book, red, blue and yellow.",
+                "C": "Rubix Cube",
+                "D": "Table Computer, black",
+                "E": "Butter Cookies, Metal box"
+            },
+            "Correct Choice": "C"
+        },
+        "Q72": {
+            "Type": "Object Detection",
+            "Change Number": 72,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the right side of Emily's cubicle?",
+            "Multiple Choice": {
+                "A": "Exploting Kittens, Boardgame, blue box",
+                "B": "Android Toy, green humanoid toy",
+                "C": "Pig Pink Plush",
+                "D": "Roman head statue, toy",
+                "E": "Pencil Holder "
+            },
+            "Correct Choice": "C"
+        },
+        "Q73": {
+            "Type": "Object Detection",
+            "Change Number": 73,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared on the left side of Jack. S's cubicle?",
+            "Multiple Choice": {
+                "A": "Box of Gloves",
+                "B": "RTX GPU 2080 Ti",
+                "C": "Pick toy",
+                "D": "Catan Board game box red",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q74": {
+            "Type": "Object Detection",
+            "Change Number": 74,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared on top of the chair in Jerry's cubicle?",
+            "Multiple Choice": {
+                "A": "Eiffel tower toy",
+                "B": "Brow Jacket",
+                "C": "Rubix Cube",
+                "D": "Red starbucks cup",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q75": {
+            "Type": "Object Detection",
+            "Change Number": 75,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared at the back of Daniel's cubicle beside the monitor?",
+            "Multiple Choice": {
+                "A": "Pink Box, with chinese writing and bottle inside",
+                "B": "Duracel Batteries",
+                "C": "GPU RTX 4090 Box",
+                "D": "Painting",
+                "E": "All of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q76": {
+            "Type": "Object Detection",
+            "Change Number": 76,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from in front of the monitor in Daniel's cubicle?",
+            "Multiple Choice": {
+                "A": "Computer Fan, Brown",
+                "B": "Dixit, board game box",
+                "C": "Eiffel tower toy",
+                "D": "coffee kettle",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q77": {
+            "Type": "Object Detection",
+            "Change Number": 77,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared beside the monitor in Frank's cubicle?",
+            "Multiple Choice": {
+                "A": "Roman head statue, toy",
+                "B": "Colourful backpack",
+                "C": "Butter Cookies",
+                "D": "125 box of chocolated, red box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q78": {
+            "Type": "Object Detection",
+            "Change Number": 78,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared at the back of Daniel's cubicle beside the whiteboard?",
+            "Multiple Choice": {
+                "A": "GPU RTX 4090 Box",
+                "B": "125 box of chocolates, red box",
+                "C": "Yellow and purpule plushi",
+                "D": "Exploting Kittens, Boardgame, blue box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q79": {
+            "Type": "Object Detection",
+            "Change Number": 79,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared on top of the PC case in Alex's cubicle?",
+            "Multiple Choice": {
+                "A": "Newport, black brief case",
+                "B": "Bridge of park, white box of card",
+                "C": "Coup, boardgame box",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q80": {
+            "Type": "Object Detection",
+            "Change Number": 80,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the left side of Alex's cubicle, on top of the picture frames?",
+            "Multiple Choice": {
+                "A": "Cpu HeatSink",
+                "B": "Goose plush",
+                "C": "Eiffel tower toy",
+                "D": "Duracel Batteries",
+                "E": "Table Computer, black"
+            },
+            "Correct Choice": "D"
+        },
+        "Q81": {
+            "Type": "Object Detection",
+            "Change Number": 81,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the left side of Alex's cubicle, on top of the picture frames?",
+            "Multiple Choice": {
+                "A": "RTX GPU 2080 Ti",
+                "B": "Purple Human shaped stress toy.",
+                "C": "Coup, boardgame box",
+                "D": "Electronics Fundamentals Book, red, blue and yellow.",
+                "E": "Uno, Board game box, pack or cards"
+            },
+            "Correct Choice": "E"
+        },
+        "Q82": {
+            "Type": "Object Detection",
+            "Change Number": 82,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the left side of Amy's cubicle, close to the edge?",
+            "Multiple Choice": {
+                "A": "GPU RTX 2080 Ti",
+                "B": "GPU RTX 4090 Box",
+                "C": "Android Toy, green humanoid toy",
+                "D": "Catan Board game box red, Extension ",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q83": {
+            "Type": "Object Detection",
+            "Change Number": 83,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the left side of Alana's cubicle, close to the edge?",
+            "Multiple Choice": {
+                "A": "Roman head statue, toy",
+                "B": "125 Chocolate box, Red",
+                "C": "Painting",
+                "D": "Frisbee",
+                "E": "Monopoly Deal boardgame, green box"
+            },
+            "Correct Choice": "C"
+        },
+        "Q84": {
+            "Type": "Object Detection",
+            "Change Number": 84,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the right side of Alana's cubicle?",
+            "Multiple Choice": {
+                "A": "Tata Tea, Green Box",
+                "B": "Tim Hortons Donut Box",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "Green triceratops dinosaur toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q85": {
+            "Type": "Object Detection",
+            "Change Number": 85,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the right side of Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "Table Computer, black",
+                "B": "1000 Piece Puzzle",
+                "C": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "D": "Bridge of park, white box of card",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q86": {
+            "Type": "Object Detection",
+            "Change Number": 86,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared on the right side of Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "Pair of Sneaker",
+                "B": "Black backpack",
+                "C": "Laptop, Lenovo thinkpad",
+                "D": "Goose plush",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q87": {
+            "Type": "Object Detection",
+            "Change Number": 87,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared at the back of Kristine's cubicle, below the whiteboard?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Catan Board game box red",
+                "C": "Rubix Cube",
+                "D": "Cpu HeatSink",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q88": {
+            "Type": "Object Detection",
+            "Change Number": 88,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared at the back of Cecilia's cubicle, below the whiteboard?",
+            "Multiple Choice": {
+                "A": "Dixit, board game box",
+                "B": "Pink Toy,",
+                "C": "Frisbee",
+                "D": "Purple Human shaped stress toy.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q89": {
+            "Type": "Object Detection",
+            "Change Number": 89,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the right side of Sherlock Holmes' cubicle?",
+            "Multiple Choice": {
+                "A": "Coup, boardgame box",
+                "B": "1000 Piece Puzzle",
+                "C": "Uno, Board game box, pack or cards",
+                "D": "Painting",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q90": {
+            "Type": "Object Detection",
+            "Change Number": 90,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared on the right side of Sherlock Holmes' cubicle?",
+            "Multiple Choice": {
+                "A": "Electronics Fundamentals Book, red, blue and yellow.",
+                "B": "Table Computer, black",
+                "C": "GPU RTX 4090 Box",
+                "D": "Dixit, board game box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q91": {
+            "Type": "Object Detection",
+            "Change Number": 91,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object appeared close to the PC in James' cubicle?",
+            "Multiple Choice": {
+                "A": "125 Box of chocolates, red box",
+                "B": "Tata Tea, Green Box",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "Bridge of park, white box of card",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q92": {
+            "Type": "Object Detection",
+            "Change Number": 92,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "Which object disappeared from the left side of the PC in Jessica's cubicle?",
+            "Multiple Choice": {
+                "A": "Box of Gloves",
+                "B": "Android Toy, green humanoid toy",
+                "C": "Roman head statue, toy",
+                "D": "Black Ethernet Cable",
+                "E": "Newport, black brief case"
+            },
+            "Correct Choice": "D"
+        },
+        "Q93": {
+            "Type": "Object Detection",
+            "Change Number": 93,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the right side of Jack. J's cubicle, on top of a black box?",
+            "Multiple Choice": {
+                "A": "Green triceratops dinosaur toy",
+                "B": "Muffin",
+                "C": "White phone charger with red cable",
+                "D": "Rubix Cube",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q94": {
+            "Type": "Object Detection",
+            "Change Number": 94,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on top of the PC in Emily's cubicle?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Eiffel tower toy",
+                "C": "Box of Gloves",
+                "D": "Brow Jacket",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q95": {
+            "Type": "Object Detection",
+            "Change Number": 95,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the left side of Jack. S's cubicle?",
+            "Multiple Choice": {
+                "A": "Pink Box, with chinese writing and bottle inside",
+                "B": "Eiffel tower toy",
+                "C": "125 box of chocolated, red box",
+                "D": "Box of Gloves",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q96": {
+            "Type": "Object Detection",
+            "Change Number": 96,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared in front of the Monitor in Daniel's cubicle?",
+            "Multiple Choice": {
+                "A": "Duracel Batteries",
+                "B": "GPU RTX 4090 Box",
+                "C": "Coup, boardgame box",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "All of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q97": {
+            "Type": "Object Detection",
+            "Change Number": 97,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from in front of the Monitors in Daniel's cubicle?",
+            "Multiple Choice": {
+                "A": "GPU RTX 2080 Ti",
+                "B": "Painting",
+                "C": "Purple Human shaped stress toy.",
+                "D": "Green triceratops dinosaur toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q98": {
+            "Type": "Object Detection",
+            "Change Number": 98,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared in front of the PC in Amy's cubicle?",
+            "Multiple Choice": {
+                "A": "Table Computer, black",
+                "B": "Laptop, Lenovo thinkpad",
+                "C": "Cpu HeatSink",
+                "D": "Uno, Board game box, pack or cards",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q99": {
+            "Type": "Object Detection",
+            "Change Number": 99,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the left side of Alex's cubicle, on top of the picture frames?",
+            "Multiple Choice": {
+                "A": "GPU RTX 2080 Ti",
+                "B": "Dixit, board game box",
+                "C": "1000 Piece Puzzle",
+                "D": "Electronics Fundamentals Book, red, blue and yellow.",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q100": {
+            "Type": "Object Detection",
+            "Change Number": 100,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from on top of the PC in Alex's cubicle?",
+            "Multiple Choice": {
+                "A": "Exploting Kittens, Boardgame, blue box",
+                "B": "Black Ethernet Cable",
+                "C": "Green triceratops dinosaur toy",
+                "D": "Coup, boardgame box",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q101": {
+            "Type": "Object Detection",
+            "Change Number": 101,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the left side of Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "Catan Board game box red",
+                "B": "Eiffel tower toy",
+                "C": "Box of Gloves",
+                "D": "Duracel Batteries",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q102": {
+            "Type": "Object Detection",
+            "Change Number": 102,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the right side of Eddie's cubicle?",
+            "Multiple Choice": {
+                "A": "Purple Human shaped stress toy.",
+                "B": "Uno, Board game box, pack or cards",
+                "C": "Painting",
+                "D": "GPU RTX 2080 Ti",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q103": {
+            "Type": "Object Detection",
+            "Change Number": 103,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the right side of Eddie's cubicle, beside the gray backpack?",
+            "Multiple Choice": {
+                "A": "Coup, boardgame box",
+                "B": "Catan Board game box red",
+                "C": "Painting",
+                "D": "Laptop, Lenovo thinkpad",
+                "E": "1000 Piece Puzzle"
+            },
+            "Correct Choice": "D"
+        },
+        "Q104": {
+            "Type": "Object Detection",
+            "Change Number": 104,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the left side of Cecilia's cubicle?",
+            "Multiple Choice": {
+                "A": "1000 Piece Puzzle",
+                "B": "Cpu HeatSink",
+                "C": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "D": "Blue Box full of ping pong balls",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q105": {
+            "Type": "Object Detection",
+            "Change Number": 105,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the back of Kristine's cubicle, below the whiteboard?",
+            "Multiple Choice": {
+                "A": "Pig Pink Plush",
+                "B": "Electronics Fundamentals Book, red, blue and yellow.",
+                "C": "Table Computer, black",
+                "D": "Cpu HeatSink",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q106": {
+            "Type": "Object Detection",
+            "Change Number": 106,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the left side of Kristine's cubicle, near the back?",
+            "Multiple Choice": {
+                "A": "Butter Cookies, Metal box",
+                "B": "Nvidia Jetson Nano Developer Kit, Small Green Box",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "Android Toy, green humanoid toy",
+                "E": "None of the above"
+            },
+            "Correct Choice": "B"
+        },
+        "Q107": {
+            "Type": "Object Detection",
+            "Change Number": 107,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the right side of Lauren's cubicle?",
+            "Multiple Choice": {
+                "A": "Roman head statue, toy",
+                "B": "Pencil Holder ",
+                "C": "Blue Box full of ping pong balls",
+                "D": "RTX GPU 2080 Ti",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q108": {
+            "Type": "Object Detection",
+            "Change Number": 108,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the right side of Sherlock Holmes' cubicle?",
+            "Multiple Choice": {
+                "A": "Pick toy",
+                "B": "Catan Board game box red",
+                "C": "Eiffel tower toy",
+                "D": "Pig Pink Plush",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q109": {
+            "Type": "Object Detection",
+            "Change Number": 109,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the left side of Sherlock Holmes' cubicle?",
+            "Multiple Choice": {
+                "A": "Electronics Fundamentals Book, red, blue and yellow.",
+                "B": "Rubix Cube",
+                "C": "Red starbucks cup",
+                "D": "Pink Box, with chinese writing and bottle inside",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q110": {
+            "Type": "Object Detection",
+            "Change Number": 110,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the left side of Alexandria's cubicle?",
+            "Multiple Choice": {
+                "A": "Duracel Batteries",
+                "B": "GPU RTX 4090 Box",
+                "C": "Painting",
+                "D": "Table Computer, black",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        },
+        "Q111": {
+            "Type": "Object Detection",
+            "Change Number": 111,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the right side of James' cubicle?",
+            "Multiple Choice": {
+                "A": "Butter Cookies, Metal box",
+                "B": "Computer Fan, Brown",
+                "C": "Dixit, board game box",
+                "D": "coffee kettle",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q112": {
+            "Type": "Object Detection",
+            "Change Number": 112,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the right side of James' cubicle?",
+            "Multiple Choice": {
+                "A": "Roman head statue, toy",
+                "B": "Colourful backpack",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "Butter Cookies",
+                "E": "None of the above"
+            },
+            "Correct Choice": "C"
+        },
+        "Q113": {
+            "Type": "Object Detection",
+            "Change Number": 113,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from the right side of Carleton's cubicle?",
+            "Multiple Choice": {
+                "A": "125 box of chocolates, red box",
+                "B": "Yellow and purpule plushi",
+                "C": "Exploting Kittens, Boardgame, blue box",
+                "D": "Android Toy, green humanoid toy",
+                "E": "Newport, black brief case"
+            },
+            "Correct Choice": "D"
+        },
+        "Q114": {
+            "Type": "Object Detection",
+            "Change Number": 114,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object disappeared from on top of the PC in cubicle 2008R?",
+            "Multiple Choice": {
+                "A": "Roman head statue, toy",
+                "B": "Bridge of park, white box of card",
+                "C": "Uno, Board game box, pack or cards",
+                "D": "Cpu HeatSink",
+                "E": "None of the above"
+            },
+            "Correct Choice": "A"
+        },
+        "Q115": {
+            "Type": "Object Detection",
+            "Change Number": 115,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "Which object appeared on the right side of cubicle 2008R?",
+            "Multiple Choice": {
+                "A": "Goose plush",
+                "B": "Eiffel tower toy",
+                "C": "Table Computer, black",
+                "D": "Pencil Holder ",
+                "E": "None of the above"
+            },
+            "Correct Choice": "D"
+        }
+    },
+    "answers": {
+        "Q1": "C",
+        "Q2": "C",
+        "Q3": "C",
+        "Q4": "B",
+        "Q5": "C",
+        "Q6": "C",
+        "Q7": "A",
+        "Q8": "B",
+        "Q9": "D",
+        "Q10": "A",
+        "Q11": "A",
+        "Q12": "C",
+        "Q13": "B",
+        "Q14": "C",
+        "Q15": "C",
+        "Q16": "D",
+        "Q17": "D",
+        "Q18": "B",
+        "Q19": "A",
+        "Q20": "D",
+        "Q21": "C",
+        "Q22": "D",
+        "Q23": "B",
+        "Q24": "C",
+        "Q25": "A",
+        "Q26": "E",
+        "Q27": "A",
+        "Q28": "B",
+        "Q29": "A",
+        "Q30": "B",
+        "Q31": "C",
+        "Q32": "D",
+        "Q33": "D",
+        "Q34": "B",
+        "Q35": "E",
+        "Q36": "C",
+        "Q37": "D",
+        "Q38": "D",
+        "Q39": "C",
+        "Q40": "D",
+        "Q41": "A",
+        "Q42": "B",
+        "Q43": "D",
+        "Q44": "B",
+        "Q45": "D",
+        "Q46": "B",
+        "Q47": "D",
+        "Q48": "A",
+        "Q49": "C",
+        "Q50": "B",
+        "Q51": "C",
+        "Q52": "C",
+        "Q53": "D",
+        "Q54": "A",
+        "Q55": "E",
+        "Q56": "D",
+        "Q57": "B",
+        "Q58": "B",
+        "Q59": "C",
+        "Q60": "C",
+        "Q61": "D",
+        "Q62": "A",
+        "Q63": "A",
+        "Q64": "D",
+        "Q65": "A",
+        "Q66": "A",
+        "Q67": "D",
+        "Q68": "A",
+        "Q69": "C",
+        "Q70": "B",
+        "Q71": "E",
+        "Q72": "B",
+        "Q73": "A",
+        "Q74": "B",
+        "Q75": "C",
+        "Q76": "A",
+        "Q77": "B",
+        "Q78": "C",
+        "Q79": "C",
+        "Q80": "C",
+        "Q81": "B",
+        "Q82": "B",
+        "Q83": "E",
+        "Q84": "D",
+        "Q85": "B",
+        "Q86": "B",
+        "Q87": "B",
+        "Q88": "C",
+        "Q89": "B",
+        "Q90": "D",
+        "Q91": "C",
+        "Q92": "E",
+        "Q93": "D",
+        "Q94": "A",
+        "Q95": "C",
+        "Q96": "B",
+        "Q97": "D",
+        "Q98": "B",
+        "Q99": "B",
+        "Q100": "D",
+        "Q101": "A",
+        "Q102": "C",
+        "Q103": "D",
+        "Q104": "C",
+        "Q105": "C",
+        "Q106": "A",
+        "Q107": "C",
+        "Q108": "D",
+        "Q109": "C",
+        "Q110": "D",
+        "Q111": "C",
+        "Q112": "B",
+        "Q113": "E",
+        "Q114": "A",
+        "Q115": "A"
+    },
+    "score": {
+        "correct": 39,
+        "total": 115,
+        "percentage": 33.91304347826087
+    },
+    "timestamp": "2025-05-04 15:30:25"
+}

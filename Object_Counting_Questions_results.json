@@ -1,0 +1,2042 @@
+{
+    "model": "gemini-2.5-pro-preview-03-25",
+    "prompt": "\nYou are taking a multiple-choice benchmark.  \n  \nTo answer the questions, you will be provided with two videos. The first video is the initial state of the scene, and the second video is the final state of the scene.\nPlease pay attention to the changes of object in the scene between the two videos.\nFuthermore, if we say on object had been removed, vanished or disappear from a cubicle it means it will not be present in the second video.\nIf we say an object has appeared in a cubicle it means it will be present in the second video.\nIf we say an object has been moved, it means it has moved within the cubicle or between cubicles.\n\nPlease answer the question to best of your ability. \n\nFor each question below, reply with the single letter (A\u2013E) that you believe is correct.  \nDo not provide explanations\u2014only the letter.\n\nPlease return a json object in the following format:\n\n\"answers\": [\n{\n    \"question\": \"Q1\",\n    \"answer\": \"B\"\n},\n{\n    \"question\": \"Q2\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q3\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q4\",\n    \"answer\": \"B\"\n},\n{\n    \"question\": \"Q5\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q6\",\n    \"answer\": \"C\"\n},\n{\n    \"question\": \"Q7\",\n    \"answer\": \"C\"\n}\n....\n]\n\nPlease use the Q# correspoding the questions provided.\n\nQ102:\nQuestion: What change occurred in the count of teddy bears?\nA: Increased from 1 to 2.\nB: Decreased from 2 to 1.\nC: Remained unchanged at 2.\nD: Decreased from 1 to 0.\nE: None of the above.\n\nQ103:\nQuestion: How did the count of red Coffee cups change?\nA: Increased from 1 to 3.\nB: Decreased from 3 to 1.\nC: Increased from 0 to 1.\nD: Decreased from 3 to 0.\nE: None of the above.\n\nQ104:\nQuestion: What was the final count of Laptops?\nA: 2\nB: 3\nC: 4\nD: 5\nE: The count decreased.\n\nQ105:\nQuestion: How did the number of robot arms change?\nA: Increased from 2 to 4.\nB: Decreased from 4 to 2.\nC: Remained unchanged at 2.\nD: Increased from 0 to 4.\nE: None of the above.\n\nQ106:\nQuestion: What was the change in the number of posters counted by Jessica?\nA: Increased from 0 to 2.\nB: Decreased from 2 to 0.\nC: Remained unchanged at 2.\nD: Decreased from 2 to 1.\nE: None of the above.\n\nQ107:\nQuestion: What was the initial count of lego pieces?\nA: 1\nB: 2\nC: 5\nD: 6\nE: The final count was 5.\n\nQ108:\nQuestion: How did the count of led pencils change?\nA: Increased from 1 to 2.\nB: Decreased from 2 to 1.\nC: Increased from 0 to 1.\nD: Remained unchanged at 2.\nE: None of the above.\n\nQ109:\nQuestion: What was the final count of dominoes counted by Alex?\nA: 5\nB: 4\nC: 3\nD: 2\nE: The count increased.\n\nQ110:\nQuestion: What change occurred in the count of monitors counted by Amy?\nA: Increased from 1 to 2.\nB: Decreased from 2 to 1.\nC: Remained unchanged at 2.\nD: Decreased from 1 to 0.\nE: None of the above.\n\nQ111:\nQuestion: How did the count of chopsticks in wrappers change?\nA: Increased from 0 to 4.\nB: Decreased from 4 to 0.\nC: Increased from 1 to 4.\nD: Remained unchanged at 0.\nE: None of the above.\n\nQ112:\nQuestion: What was the initial count of screw drivers?\nA: 0\nB: 1\nC: 2\nD: 3\nE: The final count was 2.\n\nQ113:\nQuestion: How did the count of posters counted by Kristine change?\nA: Increased from 3 to 5.\nB: Decreased from 5 to 3.\nC: Increased from 0 to 3.\nD: Decreased from 5 to 0.\nE: None of the above.\n\nQ114:\nQuestion: What was the final count of dominoes counted by Cecilia?\nA: 1\nB: 2\nC: 3\nD: 4\nE: The count decreased.\n\nQ115:\nQuestion: What change occurred in the count of led pencils counted by Sherlock Holmes?\nA: Increased from 4 to 8.\nB: Decreased from 8 to 4.\nC: Increased from 0 to 8.\nD: Remained unchanged at 4.\nE: None of the above.\n\nQ116:\nQuestion: How did the number of white board erasers counted by Lauren change?\nA: Increased from 2 to 3.\nB: Decreased from 3 to 2.\nC: Remained unchanged at 3.\nD: Increased from 0 to 2.\nE: None of the above.\n\nQ117:\nQuestion: What was the change in the count of custard soft cakes (snacks)?\nA: Decreased from 7 to 0.\nB: Increased from 0 to 7.\nC: Remained unchanged at 0.\nD: Increased from 1 to 7.\nE: None of the above.\n\nQ118:\nQuestion: What was the initial count of ping pong balls?\nA: 0\nB: 3\nC: 6\nD: 1\nE: The final count was 0.\n\nQ119:\nQuestion: How did the count of books counted by Jason change?\nA: Increased from 1 to 2.\nB: Decreased from 2 to 1.\nC: Increased from 0 to 1.\nD: Remained unchanged at 2.\nE: None of the above.\n\nQ120:\nQuestion: What was the final count of markers counted by James?\nA: 4\nB: 3\nC: 2\nD: 1\nE: The count increased.\n\nQ121:\nQuestion: What change occurred in the count of markers counted by Alexandria?\nA: Increased from 1 to 3.\nB: Decreased from 3 to 1.\nC: Remained unchanged at 1.\nD: Increased from 0 to 3.\nE: None of the above.\n\nQ122:\nQuestion: How did the count of hand sanitizer change?\nA: Increased from 3 to 4.\nB: Decreased from 4 to 3.\nC: Increased from 1 to 3.\nD: Decreased from 4 to 1.\nE: None of the above.\n\nQ123:\nQuestion: What was the initial count of vaseline lotion?\nA: 0\nB: 1\nC: 2\nD: 3\nE: The final count was 1.\n\nQ124:\nQuestion: How did the count of Medical Alcohol Bottles (Alcol Isopropylique) change?\nA: Increased from 2 to 3.\nB: Decreased from 3 to 2.\nC: Remained unchanged at 3.\nD: Increased from 0 to 2.\nE: None of the above.\n\nQ125:\nQuestion: What was the final count of plastic water bottles counted by Eddie?\nA: 3\nB: 2\nC: 1\nD: 0\nE: The count increased.\n\nQ126:\nQuestion: What change occurred in the count of whiteboard erasers counted by Alana?\nA: Increased from 1 to 2.\nB: Decreased from 2 to 1.\nC: Increased from 0 to 2.\nD: Remained unchanged at 1.\nE: None of the above.\n\n\n",
+    "video_paths": [
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_0_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_1_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_1_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_2_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_2_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_3_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_3_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_4_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_4_720p_10fps.mp4",
+        "/home/fernando/Gemini Benchmark/Global_Changes/episode_5_720p_10fps.mp4"
+    ],
+    "questions": {
+        "Q1": {
+            "Type": "Object Counting",
+            "Change Number": 1,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What change occurred in the count of steel mugs?",
+            "Multiple Choice": {
+                "A": "The count increased from 1 to 2.",
+                "B": "The count remained unchanged at 2.",
+                "C": "The count decreased from 2 to 1.",
+                "D": "The count increased from 0 to 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "C"
+        },
+        "Q2": {
+            "Type": "Object Counting",
+            "Change Number": 2,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How many Black PNY boxes were present initially?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count did not change."
+            },
+            "Correct Choice": "C"
+        },
+        "Q3": {
+            "Type": "Object Counting",
+            "Change Number": 3,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of Black and yellow uphara boxes?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q4": {
+            "Type": "Object Counting",
+            "Change Number": 4,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the count of plastic water bottles change?",
+            "Multiple Choice": {
+                "A": "Decreased from 3 to 1.",
+                "B": "Increased from 1 to 3.",
+                "C": "Increased from 0 to 3.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q5": {
+            "Type": "Object Counting",
+            "Change Number": 5,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the change in the number of posters?",
+            "Multiple Choice": {
+                "A": "Decreased from 2 to 0.",
+                "B": "Increased from 0 to 2.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q6": {
+            "Type": "Object Counting",
+            "Change Number": 6,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of lego pieces?",
+            "Multiple Choice": {
+                "A": "5",
+                "B": "6",
+                "C": "7",
+                "D": "2",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q7": {
+            "Type": "Object Counting",
+            "Change Number": 7,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the count of led pencils change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 5.",
+                "B": "Decreased from 5 to 1.",
+                "C": "Increased from 0 to 5.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q8": {
+            "Type": "Object Counting",
+            "Change Number": 8,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the initial count of small brown boxes?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 0."
+            },
+            "Correct Choice": "A"
+        },
+        "Q9": {
+            "Type": "Object Counting",
+            "Change Number": 9,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What change occurred in the count of computer mice?",
+            "Multiple Choice": {
+                "A": "Decreased from 2 to 0.",
+                "B": "Increased from 0 to 2.",
+                "C": "Increased from 1 to 2.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q10": {
+            "Type": "Object Counting",
+            "Change Number": 10,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of keyboards?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q11": {
+            "Type": "Object Counting",
+            "Change Number": 11,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the number of notebooks change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 1 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q12": {
+            "Type": "Object Counting",
+            "Change Number": 12,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the change in the count of bobble head toys \"Pop\"?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Increased from 0 to 2.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q13": {
+            "Type": "Object Counting",
+            "Change Number": 13,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of sticky notes (yellow, green, purple and blue)?",
+            "Multiple Choice": {
+                "A": "4",
+                "B": "3",
+                "C": "2",
+                "D": "1",
+                "E": "The count increased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q14": {
+            "Type": "Object Counting",
+            "Change Number": 14,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the count of black boxes change?",
+            "Multiple Choice": {
+                "A": "Decreased from 2 to 0.",
+                "B": "Increased from 0 to 2.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q15": {
+            "Type": "Object Counting",
+            "Change Number": 15,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What change occurred in the number of markers counted by Sherlock Holmes?",
+            "Multiple Choice": {
+                "A": "Increased from 4 to 6.",
+                "B": "Decreased from 6 to 4.",
+                "C": "Increased from 0 to 4.",
+                "D": "Decreased from 6 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q16": {
+            "Type": "Object Counting",
+            "Change Number": 16,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of lined paper?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q17": {
+            "Type": "Object Counting",
+            "Change Number": 17,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the count of Tissue Paper change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 1.",
+                "B": "Decreased from 1 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q18": {
+            "Type": "Object Counting",
+            "Change Number": 18,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the change in the number of markers counted by Jason?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Increased from 1 to 2.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q19": {
+            "Type": "Object Counting",
+            "Change Number": 19,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the initial count of graphics cards?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 0."
+            },
+            "Correct Choice": "A"
+        },
+        "Q20": {
+            "Type": "Object Counting",
+            "Change Number": 20,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the count of books change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 4.",
+                "B": "Decreased from 4 to 1.",
+                "C": "Increased from 0 to 4.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q21": {
+            "Type": "Object Counting",
+            "Change Number": 21,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of hand sanitizer?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q22": {
+            "Type": "Object Counting",
+            "Change Number": 22,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What change occurred in the count of red boxes?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Increased from 0 to 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q23": {
+            "Type": "Object Counting",
+            "Change Number": 23,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "How did the count of white board erasers change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Increased from 0 to 2.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q24": {
+            "Type": "Object Counting",
+            "Change Number": 24,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What was the final count of dominoes counted by Jason?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "2",
+                "C": "4",
+                "D": "6",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q25": {
+            "Type": "Object Counting",
+            "Change Number": 25,
+            "Initial Video": 0,
+            "Final Video": 1,
+            "Question": "What change occurred in the count of ping pong paddles counted by Jason?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 3.",
+                "B": "Decreased from 3 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 3.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q26": {
+            "Type": "Object Counting",
+            "Change Number": 26,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the final count of ping pong paddles counted by Daniel?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q27": {
+            "Type": "Object Counting",
+            "Change Number": 27,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of red coffee cups change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Increased from 0 to 2.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q28": {
+            "Type": "Object Counting",
+            "Change Number": 28,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What change occurred in the count of Black and yellow uphara boxes?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 1 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q29": {
+            "Type": "Object Counting",
+            "Change Number": 29,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the initial count of plastic water bottles?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The count increased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q30": {
+            "Type": "Object Counting",
+            "Change Number": 30,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of posters counted by Jessica change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 4.",
+                "B": "Decreased from 4 to 2.",
+                "C": "Increased from 0 to 4.",
+                "D": "Remained unchanged at 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q31": {
+            "Type": "Object Counting",
+            "Change Number": 31,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the final count of lego pieces?",
+            "Multiple Choice": {
+                "A": "6",
+                "B": "5",
+                "C": "4",
+                "D": "7",
+                "E": "The count increased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q32": {
+            "Type": "Object Counting",
+            "Change Number": 32,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What change occurred in the count of led pencils?",
+            "Multiple Choice": {
+                "A": "Increased from 5 to 7.",
+                "B": "Decreased from 7 to 5.",
+                "C": "Increased from 5 to 6.",
+                "D": "Decreased from 7 to 6.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q33": {
+            "Type": "Object Counting",
+            "Change Number": 33,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the number of small brown boxes change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 2 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q34": {
+            "Type": "Object Counting",
+            "Change Number": 34,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the change in the count of computer mice?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Increased from 0 to 3.",
+                "D": "Remained unchanged at 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q35": {
+            "Type": "Object Counting",
+            "Change Number": 35,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the initial count of keyboards?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "0",
+                "E": "The final count was 2."
+            },
+            "Correct Choice": "B"
+        },
+        "Q36": {
+            "Type": "Object Counting",
+            "Change Number": 36,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of notebooks change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 3.",
+                "B": "Decreased from 3 to 1.",
+                "C": "Increased from 0 to 3.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q37": {
+            "Type": "Object Counting",
+            "Change Number": 37,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the final count of bobble head toys \"Pop\"?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q38": {
+            "Type": "Object Counting",
+            "Change Number": 38,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What change occurred in the count of dominoes counted by Cecilia?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 6.",
+                "B": "Decreased from 6 to 0.",
+                "C": "Increased from 1 to 6.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q39": {
+            "Type": "Object Counting",
+            "Change Number": 39,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of black boxes change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 1 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q40": {
+            "Type": "Object Counting",
+            "Change Number": 40,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the initial count of markers counted by Sherlock Holmes?",
+            "Multiple Choice": {
+                "A": "3",
+                "B": "4",
+                "C": "5",
+                "D": "6",
+                "E": "The final count was 4."
+            },
+            "Correct Choice": "B"
+        },
+        "Q41": {
+            "Type": "Object Counting",
+            "Change Number": 41,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of lined paper change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Increased from 0 to 3.",
+                "D": "Remained unchanged at 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q42": {
+            "Type": "Object Counting",
+            "Change Number": 42,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the change in the number of posters counted by James?",
+            "Multiple Choice": {
+                "A": "Decreased from 3 to 0.",
+                "B": "Increased from 0 to 3.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 3.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q43": {
+            "Type": "Object Counting",
+            "Change Number": 43,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the final count of markers counted by Jason?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q44": {
+            "Type": "Object Counting",
+            "Change Number": 44,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What change occurred in the count of graphics cards?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 2 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q45": {
+            "Type": "Object Counting",
+            "Change Number": 45,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of books change?",
+            "Multiple Choice": {
+                "A": "Increased from 4 to 6.",
+                "B": "Decreased from 6 to 4.",
+                "C": "Increased from 2 to 6.",
+                "D": "Remained unchanged at 4.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q46": {
+            "Type": "Object Counting",
+            "Change Number": 46,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the initial count of hand sanitizer?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 1."
+            },
+            "Correct Choice": "C"
+        },
+        "Q47": {
+            "Type": "Object Counting",
+            "Change Number": 47,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the count of red boxes change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 1.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q48": {
+            "Type": "Object Counting",
+            "Change Number": 48,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the final count of white board erasers?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "D"
+        },
+        "Q49": {
+            "Type": "Object Counting",
+            "Change Number": 49,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What change occurred in the count of dominoes counted by Jason?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 4.",
+                "B": "Decreased from 4 to 2.",
+                "C": "Increased from 0 to 2.",
+                "D": "Decreased from 4 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q50": {
+            "Type": "Object Counting",
+            "Change Number": 50,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "How did the number of ping pong paddles counted by Jason change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Decreased from 2 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q51": {
+            "Type": "Object Counting",
+            "Change Number": 51,
+            "Initial Video": 1,
+            "Final Video": 2,
+            "Question": "What was the change in the count of puzzle boxes?",
+            "Multiple Choice": {
+                "A": "Decreased from 1 to 0.",
+                "B": "Increased from 0 to 1.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q52": {
+            "Type": "Object Counting",
+            "Change Number": 52,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What change occurred in the count of ping pong paddles counted by Daniel?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Increased from 0 to 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q53": {
+            "Type": "Object Counting",
+            "Change Number": 53,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How many Black boxes (PNY) were present finally?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q54": {
+            "Type": "Object Counting",
+            "Change Number": 54,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the initial count of Black and yellow uphara boxes?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 1."
+            },
+            "Correct Choice": "B"
+        },
+        "Q55": {
+            "Type": "Object Counting",
+            "Change Number": 55,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of plastic water bottles change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Increased from 1 to 3.",
+                "D": "Remained unchanged at 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q56": {
+            "Type": "Object Counting",
+            "Change Number": 56,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the change in the number of posters counted by Jessica?",
+            "Multiple Choice": {
+                "A": "Decreased from 6 to 4.",
+                "B": "Increased from 4 to 6.",
+                "C": "Remained unchanged at 4.",
+                "D": "Increased from 2 to 6.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q57": {
+            "Type": "Object Counting",
+            "Change Number": 57,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the final count of lego pieces?",
+            "Multiple Choice": {
+                "A": "5",
+                "B": "4",
+                "C": "3",
+                "D": "2",
+                "E": "The count increased."
+            },
+            "Correct Choice": "D"
+        },
+        "Q58": {
+            "Type": "Object Counting",
+            "Change Number": 58,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of led pencils change?",
+            "Multiple Choice": {
+                "A": "Decreased from 5 to 3.",
+                "B": "Increased from 3 to 5.",
+                "C": "Increased from 2 to 5.",
+                "D": "Decreased from 5 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q59": {
+            "Type": "Object Counting",
+            "Change Number": 59,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the initial count of small brown boxes?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 1."
+            },
+            "Correct Choice": "B"
+        },
+        "Q60": {
+            "Type": "Object Counting",
+            "Change Number": 60,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What change occurred in the count of computer mice?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q61": {
+            "Type": "Object Counting",
+            "Change Number": 61,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of keyboards change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Decreased from 2 to 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q62": {
+            "Type": "Object Counting",
+            "Change Number": 62,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the final count of notebooks?",
+            "Multiple Choice": {
+                "A": "3",
+                "B": "2",
+                "C": "1",
+                "D": "0",
+                "E": "The count increased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q63": {
+            "Type": "Object Counting",
+            "Change Number": 63,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What change occurred in the count of bobble head toys \"Pop\"?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Increased from 1 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q64": {
+            "Type": "Object Counting",
+            "Change Number": 64,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of dominoes counted by Cecilia change?",
+            "Multiple Choice": {
+                "A": "Increased from 4 to 6.",
+                "B": "Decreased from 6 to 4.",
+                "C": "Increased from 0 to 4.",
+                "D": "Decreased from 6 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q65": {
+            "Type": "Object Counting",
+            "Change Number": 65,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the initial count of computer fans?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 0."
+            },
+            "Correct Choice": "A"
+        },
+        "Q66": {
+            "Type": "Object Counting",
+            "Change Number": 66,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What change occurred in the number of markers counted by Sherlock Holmes?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 5.",
+                "B": "Decreased from 5 to 1.",
+                "C": "Increased from 0 to 1.",
+                "D": "Decreased from 5 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q67": {
+            "Type": "Object Counting",
+            "Change Number": 67,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the final count of lined paper?",
+            "Multiple Choice": {
+                "A": "3",
+                "B": "2",
+                "C": "1",
+                "D": "0",
+                "E": "The count increased."
+            },
+            "Correct Choice": "B"
+        },
+        "Q68": {
+            "Type": "Object Counting",
+            "Change Number": 68,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of posters counted by James change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q69": {
+            "Type": "Object Counting",
+            "Change Number": 69,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the change in the number of markers counted by Jason?",
+            "Multiple Choice": {
+                "A": "Decreased from 7 to 3.",
+                "B": "Increased from 3 to 7.",
+                "C": "Remained unchanged at 3.",
+                "D": "Increased from 0 to 7.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q70": {
+            "Type": "Object Counting",
+            "Change Number": 70,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the initial count of graphics cards?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 1."
+            },
+            "Correct Choice": "B"
+        },
+        "Q71": {
+            "Type": "Object Counting",
+            "Change Number": 71,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of books change?",
+            "Multiple Choice": {
+                "A": "Increased from 4 to 6.",
+                "B": "Decreased from 6 to 4.",
+                "C": "Increased from 0 to 4.",
+                "D": "Decreased from 6 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q72": {
+            "Type": "Object Counting",
+            "Change Number": 72,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the final count of hand sanitizer?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q73": {
+            "Type": "Object Counting",
+            "Change Number": 73,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What change occurred in the count of vaseline lotion?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q74": {
+            "Type": "Object Counting",
+            "Change Number": 74,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of white board erasers change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 4.",
+                "B": "Decreased from 4 to 2.",
+                "C": "Increased from 0 to 2.",
+                "D": "Decreased from 4 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q75": {
+            "Type": "Object Counting",
+            "Change Number": 75,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "What was the initial count of dominoes counted by Jason?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "2",
+                "C": "4",
+                "D": "6",
+                "E": "The final count was 2."
+            },
+            "Correct Choice": "B"
+        },
+        "Q76": {
+            "Type": "Object Counting",
+            "Change Number": 76,
+            "Initial Video": 2,
+            "Final Video": 3,
+            "Question": "How did the count of ping pong paddles counted by Jason change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 2.",
+                "D": "Increased from 0 to 3.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q77": {
+            "Type": "Object Counting",
+            "Change Number": 77,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the final count of teddy bears?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q78": {
+            "Type": "Object Counting",
+            "Change Number": 78,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What change occurred in the count of red Coffee cups?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 2.",
+                "D": "Increased from 1 to 3.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q79": {
+            "Type": "Object Counting",
+            "Change Number": 79,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of Red plastic cups change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q80": {
+            "Type": "Object Counting",
+            "Change Number": 80,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the initial count of plastic water bottles?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The count increased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q81": {
+            "Type": "Object Counting",
+            "Change Number": 81,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of posters counted by Jessica change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 6.",
+                "B": "Decreased from 6 to 2.",
+                "C": "Increased from 0 to 2.",
+                "D": "Decreased from 6 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q82": {
+            "Type": "Object Counting",
+            "Change Number": 82,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the final count of lego pieces?",
+            "Multiple Choice": {
+                "A": "2",
+                "B": "3",
+                "C": "4",
+                "D": "5",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "D"
+        },
+        "Q83": {
+            "Type": "Object Counting",
+            "Change Number": 83,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What change occurred in the count of led pencils?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 5.",
+                "B": "Decreased from 5 to 2.",
+                "C": "Remained unchanged at 5.",
+                "D": "Decreased from 5 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q84": {
+            "Type": "Object Counting",
+            "Change Number": 84,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the number of dominoes counted by Alex change?",
+            "Multiple Choice": {
+                "A": "Decreased from 5 to 0.",
+                "B": "Increased from 0 to 5.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 5.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q85": {
+            "Type": "Object Counting",
+            "Change Number": 85,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the change in the count of notebooks counted by Amy?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Increased from 1 to 2.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q86": {
+            "Type": "Object Counting",
+            "Change Number": 86,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the initial count of computer mice?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 2."
+            },
+            "Correct Choice": "C"
+        },
+        "Q87": {
+            "Type": "Object Counting",
+            "Change Number": 87,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of screw drivers change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Increased from 1 to 2.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q88": {
+            "Type": "Object Counting",
+            "Change Number": 88,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the final count of posters counted by Kristine?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "2",
+                "C": "3",
+                "D": "5",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "D"
+        },
+        "Q89": {
+            "Type": "Object Counting",
+            "Change Number": 89,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What change occurred in the count of dominoes counted by Cecilia?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 4.",
+                "B": "Decreased from 4 to 1.",
+                "C": "Remained unchanged at 4.",
+                "D": "Decreased from 1 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q90": {
+            "Type": "Object Counting",
+            "Change Number": 90,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of led pencils counted by Sherlock Holmes change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 4.",
+                "B": "Decreased from 4 to 0.",
+                "C": "Increased from 1 to 4.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q91": {
+            "Type": "Object Counting",
+            "Change Number": 91,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the initial count of white board erasers counted by Lauren?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 0."
+            },
+            "Correct Choice": "A"
+        },
+        "Q92": {
+            "Type": "Object Counting",
+            "Change Number": 92,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What change occurred in the number of markers counted by Jason?",
+            "Multiple Choice": {
+                "A": "Increased from 3 to 7.",
+                "B": "Decreased from 7 to 3.",
+                "C": "Increased from 0 to 3.",
+                "D": "Decreased from 7 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q93": {
+            "Type": "Object Counting",
+            "Change Number": 93,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the final count of posters counted by James?",
+            "Multiple Choice": {
+                "A": "2",
+                "B": "1",
+                "C": "0",
+                "D": "3",
+                "E": "The count increased."
+            },
+            "Correct Choice": "B"
+        },
+        "Q94": {
+            "Type": "Object Counting",
+            "Change Number": 94,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of books counted by Jason change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q95": {
+            "Type": "Object Counting",
+            "Change Number": 95,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the change in the number of monitors?",
+            "Multiple Choice": {
+                "A": "Decreased from 2 to 1.",
+                "B": "Increased from 1 to 2.",
+                "C": "Remained unchanged at 1.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q96": {
+            "Type": "Object Counting",
+            "Change Number": 96,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the initial count of books counted by Alexandria?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The final count was 4."
+            },
+            "Correct Choice": "D"
+        },
+        "Q97": {
+            "Type": "Object Counting",
+            "Change Number": 97,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of hand sanitizer change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 4.",
+                "B": "Decreased from 4 to 1.",
+                "C": "Increased from 0 to 4.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q98": {
+            "Type": "Object Counting",
+            "Change Number": 98,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the final count of vaseline lotion?",
+            "Multiple Choice": {
+                "A": "2",
+                "B": "1",
+                "C": "0",
+                "D": "3",
+                "E": "The count increased."
+            },
+            "Correct Choice": "B"
+        },
+        "Q99": {
+            "Type": "Object Counting",
+            "Change Number": 99,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What change occurred in the count of Medical Alcohol Bottles (Alcol Isopropylique)?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 3.",
+                "B": "Decreased from 3 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 3.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q100": {
+            "Type": "Object Counting",
+            "Change Number": 100,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "How did the count of plastic water bottles counted by Eddie change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 3.",
+                "B": "Decreased from 3 to 0.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 3.",
+                "E": "The initial count was 1."
+            },
+            "Correct Choice": "A"
+        },
+        "Q101": {
+            "Type": "Object Counting",
+            "Change Number": 101,
+            "Initial Video": 3,
+            "Final Video": 4,
+            "Question": "What was the initial count of ping pong paddles counted by Jason?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 3."
+            },
+            "Correct Choice": "D"
+        },
+        "Q102": {
+            "Type": "Object Counting",
+            "Change Number": 102,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What change occurred in the count of teddy bears?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 1 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q103": {
+            "Type": "Object Counting",
+            "Change Number": 103,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of red Coffee cups change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 3.",
+                "B": "Decreased from 3 to 1.",
+                "C": "Increased from 0 to 1.",
+                "D": "Decreased from 3 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q104": {
+            "Type": "Object Counting",
+            "Change Number": 104,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the final count of Laptops?",
+            "Multiple Choice": {
+                "A": "2",
+                "B": "3",
+                "C": "4",
+                "D": "5",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "D"
+        },
+        "Q105": {
+            "Type": "Object Counting",
+            "Change Number": 105,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the number of robot arms change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 4.",
+                "B": "Decreased from 4 to 2.",
+                "C": "Remained unchanged at 2.",
+                "D": "Increased from 0 to 4.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q106": {
+            "Type": "Object Counting",
+            "Change Number": 106,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the change in the number of posters counted by Jessica?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 2.",
+                "B": "Decreased from 2 to 0.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 2 to 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q107": {
+            "Type": "Object Counting",
+            "Change Number": 107,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the initial count of lego pieces?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "5",
+                "D": "6",
+                "E": "The final count was 5."
+            },
+            "Correct Choice": "C"
+        },
+        "Q108": {
+            "Type": "Object Counting",
+            "Change Number": 108,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of led pencils change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Increased from 0 to 1.",
+                "D": "Remained unchanged at 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q109": {
+            "Type": "Object Counting",
+            "Change Number": 109,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the final count of dominoes counted by Alex?",
+            "Multiple Choice": {
+                "A": "5",
+                "B": "4",
+                "C": "3",
+                "D": "2",
+                "E": "The count increased."
+            },
+            "Correct Choice": "D"
+        },
+        "Q110": {
+            "Type": "Object Counting",
+            "Change Number": 110,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What change occurred in the count of monitors counted by Amy?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Remained unchanged at 2.",
+                "D": "Decreased from 1 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q111": {
+            "Type": "Object Counting",
+            "Change Number": 111,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of chopsticks in wrappers change?",
+            "Multiple Choice": {
+                "A": "Increased from 0 to 4.",
+                "B": "Decreased from 4 to 0.",
+                "C": "Increased from 1 to 4.",
+                "D": "Remained unchanged at 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q112": {
+            "Type": "Object Counting",
+            "Change Number": 112,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the initial count of screw drivers?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 2."
+            },
+            "Correct Choice": "C"
+        },
+        "Q113": {
+            "Type": "Object Counting",
+            "Change Number": 113,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of posters counted by Kristine change?",
+            "Multiple Choice": {
+                "A": "Increased from 3 to 5.",
+                "B": "Decreased from 5 to 3.",
+                "C": "Increased from 0 to 3.",
+                "D": "Decreased from 5 to 0.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q114": {
+            "Type": "Object Counting",
+            "Change Number": 114,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the final count of dominoes counted by Cecilia?",
+            "Multiple Choice": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4",
+                "E": "The count decreased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q115": {
+            "Type": "Object Counting",
+            "Change Number": 115,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What change occurred in the count of led pencils counted by Sherlock Holmes?",
+            "Multiple Choice": {
+                "A": "Increased from 4 to 8.",
+                "B": "Decreased from 8 to 4.",
+                "C": "Increased from 0 to 8.",
+                "D": "Remained unchanged at 4.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q116": {
+            "Type": "Object Counting",
+            "Change Number": 116,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the number of white board erasers counted by Lauren change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q117": {
+            "Type": "Object Counting",
+            "Change Number": 117,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the change in the count of custard soft cakes (snacks)?",
+            "Multiple Choice": {
+                "A": "Decreased from 7 to 0.",
+                "B": "Increased from 0 to 7.",
+                "C": "Remained unchanged at 0.",
+                "D": "Increased from 1 to 7.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q118": {
+            "Type": "Object Counting",
+            "Change Number": 118,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the initial count of ping pong balls?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "3",
+                "C": "6",
+                "D": "1",
+                "E": "The final count was 0."
+            },
+            "Correct Choice": "A"
+        },
+        "Q119": {
+            "Type": "Object Counting",
+            "Change Number": 119,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of books counted by Jason change?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Increased from 0 to 1.",
+                "D": "Remained unchanged at 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q120": {
+            "Type": "Object Counting",
+            "Change Number": 120,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the final count of markers counted by James?",
+            "Multiple Choice": {
+                "A": "4",
+                "B": "3",
+                "C": "2",
+                "D": "1",
+                "E": "The count increased."
+            },
+            "Correct Choice": "C"
+        },
+        "Q121": {
+            "Type": "Object Counting",
+            "Change Number": 121,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What change occurred in the count of markers counted by Alexandria?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 3.",
+                "B": "Decreased from 3 to 1.",
+                "C": "Remained unchanged at 1.",
+                "D": "Increased from 0 to 3.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        },
+        "Q122": {
+            "Type": "Object Counting",
+            "Change Number": 122,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of hand sanitizer change?",
+            "Multiple Choice": {
+                "A": "Increased from 3 to 4.",
+                "B": "Decreased from 4 to 3.",
+                "C": "Increased from 1 to 3.",
+                "D": "Decreased from 4 to 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q123": {
+            "Type": "Object Counting",
+            "Change Number": 123,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the initial count of vaseline lotion?",
+            "Multiple Choice": {
+                "A": "0",
+                "B": "1",
+                "C": "2",
+                "D": "3",
+                "E": "The final count was 1."
+            },
+            "Correct Choice": "B"
+        },
+        "Q124": {
+            "Type": "Object Counting",
+            "Change Number": 124,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "How did the count of Medical Alcohol Bottles (Alcol Isopropylique) change?",
+            "Multiple Choice": {
+                "A": "Increased from 2 to 3.",
+                "B": "Decreased from 3 to 2.",
+                "C": "Remained unchanged at 3.",
+                "D": "Increased from 0 to 2.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "B"
+        },
+        "Q125": {
+            "Type": "Object Counting",
+            "Change Number": 125,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What was the final count of plastic water bottles counted by Eddie?",
+            "Multiple Choice": {
+                "A": "3",
+                "B": "2",
+                "C": "1",
+                "D": "0",
+                "E": "The count increased."
+            },
+            "Correct Choice": "B"
+        },
+        "Q126": {
+            "Type": "Object Counting",
+            "Change Number": 126,
+            "Initial Video": 4,
+            "Final Video": 5,
+            "Question": "What change occurred in the count of whiteboard erasers counted by Alana?",
+            "Multiple Choice": {
+                "A": "Increased from 1 to 2.",
+                "B": "Decreased from 2 to 1.",
+                "C": "Increased from 0 to 2.",
+                "D": "Remained unchanged at 1.",
+                "E": "None of the above."
+            },
+            "Correct Choice": "A"
+        }
+    },
+    "answers": {
+        "Q1": "E",
+        "Q2": "C",
+        "Q3": "C",
+        "Q4": "B",
+        "Q5": "E",
+        "Q6": "D",
+        "Q7": "C",
+        "Q8": "D",
+        "Q9": "C",
+        "Q10": "D",
+        "Q11": "C",
+        "Q12": "A",
+        "Q13": "D",
+        "Q14": "B",
+        "Q15": "D",
+        "Q16": "B",
+        "Q17": "A",
+        "Q18": "A",
+        "Q19": "B",
+        "Q20": "C",
+        "Q21": "B",
+        "Q22": "C",
+        "Q23": "D",
+        "Q24": "A",
+        "Q25": "A",
+        "Q26": "D",
+        "Q27": "D",
+        "Q28": "B",
+        "Q29": "B",
+        "Q30": "D",
+        "Q31": "D",
+        "Q32": "C",
+        "Q33": "B",
+        "Q34": "D",
+        "Q35": "A",
+        "Q36": "D",
+        "Q37": "B",
+        "Q38": "D",
+        "Q39": "D",
+        "Q40": "C",
+        "Q41": "D",
+        "Q42": "E",
+        "Q43": "D",
+        "Q44": "E",
+        "Q45": "E",
+        "Q46": "B",
+        "Q47": "E",
+        "Q48": "E",
+        "Q49": "E",
+        "Q50": "E",
+        "Q51": "E",
+        "Q52": "C",
+        "Q53": "B",
+        "Q54": "B",
+        "Q55": "A",
+        "Q56": "C",
+        "Q57": "A",
+        "Q58": "E",
+        "Q59": "A",
+        "Q60": "E",
+        "Q61": "E",
+        "Q62": "C",
+        "Q63": "E",
+        "Q64": "E",
+        "Q65": "A",
+        "Q66": "E",
+        "Q67": "C",
+        "Q68": "D",
+        "Q69": "E",
+        "Q70": "B",
+        "Q71": "E",
+        "Q72": "A",
+        "Q73": "E",
+        "Q74": "E",
+        "Q75": "D",
+        "Q76": "C",
+        "Q77": "C",
+        "Q78": "B",
+        "Q79": "B",
+        "Q80": "D",
+        "Q81": "E",
+        "Q82": "C",
+        "Q83": "D",
+        "Q84": "B",
+        "Q85": "B",
+        "Q86": "E",
+        "Q87": "E",
+        "Q88": "B",
+        "Q89": "E",
+        "Q90": "E",
+        "Q91": "B",
+        "Q92": "A",
+        "Q93": "A",
+        "Q94": "A",
+        "Q95": "E",
+        "Q96": "D",
+        "Q97": "E",
+        "Q98": "B",
+        "Q99": "E",
+        "Q100": "E",
+        "Q101": "A",
+        "Q102": "C",
+        "Q103": "E",
+        "Q104": "C",
+        "Q105": "E",
+        "Q106": "C",
+        "Q107": "C",
+        "Q108": "E",
+        "Q109": "E",
+        "Q110": "E",
+        "Q111": "A",
+        "Q112": "A",
+        "Q113": "E",
+        "Q114": "A",
+        "Q115": "E",
+        "Q116": "E",
+        "Q117": "E",
+        "Q118": "A",
+        "Q119": "E",
+        "Q120": "D",
+        "Q121": "C",
+        "Q122": "E",
+        "Q123": "A",
+        "Q124": "E",
+        "Q125": "C",
+        "Q126": "D"
+    },
+    "score": {
+        "correct": 23,
+        "total": 126,
+        "percentage": 18.253968253968253
+    },
+    "timestamp": "2025-05-04 14:42:57"
+}
