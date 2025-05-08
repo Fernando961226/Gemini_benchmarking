@@ -10,10 +10,27 @@ import enum
 
 os.environ['GOOGLE_RESUMABLE_MEDIA_CHUNK_SIZE'] = str(10 * 1024 * 1024)
 
+
+# CONSTANTS ------------------------------------------------------------
+OBJECT_COUNTING = "Object Counting.json"
+OBJECT_STATE = "Object State Change.json"   
+OBJECT_LOCATION = "Object Location Change.json"
+OBJECT_DETECTION = "Object Detection.json"
+
+
+# FUNCTIONS ------------------------------------------------------------
 # Set up logging
 def setup_logger(cubicle):
-    # Create log filename based on cubicle
-    log_filename = os.path.splitext(cubicle)[0] + "_results.log"
+    # Create logs directory if it doesn't exist
+    logs_dir = os.path.join("Local Changes", "logs")
+    os.makedirs(logs_dir, exist_ok=True)
+    
+    # Get current timestamp
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    
+    # Create log filename based on cubicle and timestamp
+    base_name = os.path.basename(cubicle)
+    log_filename = os.path.join(logs_dir, f"{timestamp}_{base_name}_results.log")
     
     # Configure logging
     logging.basicConfig(
@@ -32,15 +49,6 @@ def setup_logger(cubicle):
     
     logging.info(f"Starting video understanding benchmark for {cubicle}")
     return log_filename
-
-# CONSTANTS ------------------------------------------------------------
-OBJECT_COUNTING = "Object Counting.json"
-OBJECT_STATE = "Object State Change.json"   
-OBJECT_LOCATION = "Object Location Change.json"
-OBJECT_DETECTION = "Object Detection.json"
-
-
-# FUNCTIONS ------------------------------------------------------------
 
 def load_questions(questions_file):
     logging.info(f"Loading questions from {questions_file}")
@@ -78,9 +86,7 @@ def combine_questions(cubicle):
     logging.info(f"Combined {len(object_combined_dict)} questions total")
     return object_combined_dict
 
-
 # Load the questions from the json file
-
 def generate_questions(Q_dict, video_number):
     logging.info(f"Generating questions prompt for video number {video_number}")
     prompt_start = """
@@ -259,15 +265,13 @@ def save_results(cubicle, prompt, video_paths, questions_dict, dict_results, tot
     
     print(f"Results saved to {output_filename}")
 
-
-
 def load_api_key():
     with open("API_KEY.txt", "r") as f:
         api_key = f.read().strip()
     return api_key
 
 # INPUTS ------------------------------------------------------------
-cubicle = "Local Changes/Josh 2008S"
+cubicle = "Local Changes/Fernando 2041S"
 
 gemini_model = "gemini-2.5-pro-preview-03-25"
 

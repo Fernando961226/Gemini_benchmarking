@@ -1,13 +1,20 @@
 #%%
-import os
+import io, os
 import time
 import json
 from google import genai
-from typing_extensions import List, TypedDict, Dict
-import enum
+import logging
+from pathlib import PurePath
+
+
+
+from utils import check_file_active, QuestionAnswers, generate_content_with_retry, load_api_key, load_questions
 
 
 os.environ['GOOGLE_RESUMABLE_MEDIA_CHUNK_SIZE'] = str(10 * 1024 * 1024)
+
+
+
 
 
 def generate_questions(Q_dict,video_number):
@@ -80,69 +87,51 @@ Please use the Q# correspoding the questions provided.
 
     return questions_prompt
 
-# Check file is active
-def check_file_active(client, file):
-    while not file.state or file.state.name != "ACTIVE":
-        print("Processing video...")
-        print("File state:", file.state)
-        time.sleep(5)  # Wait 5 seconds before checking again
-        file = client.files.get(name=file.name)
-    return file
+def setup_logger(questions_file):
+    # Create logs directory if it doesn't exist
+    logs_dir = os.path.join("Local Changes", "logs")
+    os.makedirs(logs_dir, exist_ok=True)
+    
+    # Get current timestamp
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    
+    # Create log filename based on cubicle and timestamp
+    base_name = PurePath(questions_file).stem
+    log_filename = os.path.join(logs_dir, f"{timestamp}_{base_name}_results.log")
+    
+    # Configure logging
+    logging.basicConfig(
+        filename=log_filename,
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        filemode='w'  # Overwrite existing log file
+    )
+    
+    # Add console handler to see logs in terminal too
+    console = logging.StreamHandler()
+    console.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    console.setFormatter(formatter)
+    logging.getLogger('').addHandler(console)
+    
+    logging.info(f"Starting video understanding benchmark for {questions_file}")
+    return log_filename
 
-class MultipleChoice(enum.Enum):
-    A = "A"
-    B = "B"
-    C = "C"
-    D = "D"
-    E = "E"
 
-# Define a schema that allows for dynamic number of questions
-class AnswerItem(TypedDict):
-    question: str
-    answer: MultipleChoice
 
-class QuestionAnswers(TypedDict):
-    answers: List[AnswerItem]
-
-def generate_content_with_retry(client, model, contents, max_retries=3):
-    retry_count = 0
-    while retry_count < max_retries:
-        try:
-            result = client.models.generate_content(
-                model=model,
-                contents=contents,
-                config={
-                    'response_mime_type': 'application/json',
-                    'response_schema': QuestionAnswers,
-                },
-            )
-            return result
-        except Exception as e:
-            if "503 UNAVAILABLE" in str(e):
-                retry_count += 1
-                if retry_count < max_retries:
-                    print(f"Model overloaded, retrying... (Attempt {retry_count}/{max_retries})")
-                    time.sleep(10)  # Wait 5 seconds before retrying
-                else:
-                    print("Max retries reached. Moving to next video.")
-                    return None
-            else:
-                raise e  # Re-raise other exceptions
 
 
 questions_file = "Object_State_Questions.json"
 
-client = genai.Client(api_key="AIzaSyB0Q1KYjPjus3efd6zt4YX5RfjbkH1JJLQ")
-
 gemini_model = "gemini-2.5-pro-preview-03-25"
 
-try:
-    with open(questions_file, 'r') as file:
-        questions_dict = json.load(file)
-except FileNotFoundError:
-    print("File not found!")
-except json.JSONDecodeError:
-    print("Invalid JSON format!")
+
+api_key = load_api_key()
+
+client = genai.Client(api_key=api_key)
+
+questions_dict = load_questions(questions_file)
+
 
 initial_video = 0
 final_video = questions_dict[list(questions_dict.keys())[-1]]["Final Video"]
@@ -162,7 +151,7 @@ for i in range(initial_video, final_video):
     prompt = generate_questions(questions_dict,i)
 
     result = generate_content_with_retry(client, gemini_model, [video_1,  video_2, prompt])
-    # result = generate_content_with_retry(client, "gemini-2.5-flash-preview-04-17", [video_1,  video_2, prompt])
+
     
     print(result.text)
     
